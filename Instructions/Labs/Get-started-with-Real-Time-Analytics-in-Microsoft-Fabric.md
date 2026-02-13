@@ -59,7 +59,7 @@ Now that you have a workspace, download the data file for analysis. Using *Kusto
 
 1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Eventhouse (2)** and select **Eventhouse (3)**.
    
-   ![](./Images/E1T3S4.png)
+   ![](./Images/fab-image7.png)
 
 1. Enter **Eventhouse-<inject key="Deployment ID" enableCopy="false"/> (1)** as the name and click **Create (2)**.
 
@@ -114,7 +114,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
 
    ![](./Images/E1T4S1.png)
 
-   >Note: If you are unable to see the sales table, please zoom out a little in the browser wiindow inside the lab vm and check.
+   **>Note:** If you are unable to see the sales table, please zoom out a little in the browser window inside the labvm and check.
 
       ![](./Images/zoomout-2611.png)
 
@@ -127,8 +127,8 @@ Now that you have a table of data in your database, you can use KQL code to quer
    | where Item == 'Road-250 Black, 48'
     ```
 
-   ![](./Images/q1.png)
-
+   ![](./Images/fab-image8.png)
+   
 1. Run the query. Then review the results, which should contain only the rows for sales orders for the *Road-250 Black, 48* product.
 
 1. Modify the query as follows:
@@ -138,7 +138,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
    | where Item == 'Road-250 Black, 48'
    | where datetime_part('year', OrderDate) > 2020
     ```
-    ![](./Images/q2.png)
+    ![](./Images/fab-image9.png)
 
 1. Run the query and review the results, which should contain only sales orders for *Road-250 Black, 48* made after 2020.
 
@@ -151,7 +151,7 @@ Now that you have a table of data in your database, you can use KQL code to quer
    | sort by Item asc
     ```
 
-    ![](./Images/q3.png)
+    ![](./Images/fab-image10.png)
 
 1. Run the query and review the results, which should contain the total net revenue for each product between January 1st and December 31st 2020, in ascending order of product name.
 
@@ -197,7 +197,7 @@ You can use your KQL Queryset as the basis for a Power BI report.
 
      ![](./Images/E1T5S7.png)
 
-    Refresh the Workspace page if necessary to view all of the items it contains.
+    > Refresh the Workspace page if necessary to view all of the items it contains.
 
 1. In the list of items in your workspace, note that the **Revenue by Item** report is listed.
 

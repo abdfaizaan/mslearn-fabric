@@ -21,23 +21,23 @@ This task will guide you through creating a workspace in Microsoft Fabric.
 
 1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;) and click on **+ New workspace (2)**.
 
-   ![](./Images/L1T1S1-2611.png)
+   ![](./Images/fab-image2.png)
 
-1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**.
+1. Create a new workspace named **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (1)**. Expand **Advanced (2)**, then under **License mode**,
    
-   ![](./Images/E1T2S2-1.png)
+   ![](./Images/fab-image3.png)
 
-1. Expand **Advanced (2)**, then under **License mode**, select **Trial (3)** and click **Apply (4)** to create and open the workspace.
+1. Select **Trial (1)** and click **Apply (2)** to create and open the workspace.
 
-   ![](./Images/E1T2S2-2.png)
+   ![](./Images/fab-image4.png)
 
-   >**Note:** If you see a pop-up saying **"Upgrade to a paid Power BI license"**, click on **"Try free"** to proceed with the trial.
+   >**Note:** If you see a pop-up saying **"Introducing task flows (preview)**, click on **Got it** to proceed with the trial.
 
-   ![](./Images/10062025(2).png)
+    ![](./Images/fab-image5.png)
 
 1. When your new workspace opens, it should be empty, as shown here:
 
-   ![Screenshot of an empty workspace in Power BI.](./Images/E1T2S3.png)
+   ![](./Images/fab-image6.png)
  
 ## Task 2: Download the file for the KQL database and create a KQL database
 

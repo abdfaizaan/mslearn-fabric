@@ -31,7 +31,7 @@ Now that you have a workspace, it's time to switch to the *Data science* experie
 
 1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Lakehouse (2)** and select **Lakehouse (3)**.
    
-   ![](./Images/E2T1S2.png)
+   ![](./Images/fab-image11.png)
 
 1. In the **New Lakehouse** window, enter **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** as the name, select the **Location** as your workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (2)** and click **Create (3)**. Keep the Lakehouse schemas unchecked.
 
@@ -73,19 +73,19 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Notebook (2)** and select **Notebook (3)**. Then click on **Create (4)**.
 
-     ![](./Images/E2T2S2.png)
+     ![](./Images/fab-image12.png)
 
      ![](./Images/L2T2S2n-2611.png)
 
 1. On the pop-up **Enhance your notebook experience with AI tools** select **Skip tour**.
 
-    ![](./Images/E2T2S2-1.png)
+    ![](./Images/fab-image13.png)
 
 1. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
 
     ![](./Images/E2T2S3.png)
 
-    When the cell changes to a markdown cell, the text it contents is rendered.
+    When the cell changes to a markdown cell, the text it content is rendered.
 
 1. Use the **&#128393;** (Edit) button to switch the cell to editing mode.
 

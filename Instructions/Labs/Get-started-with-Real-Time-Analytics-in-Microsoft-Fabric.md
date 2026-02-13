@@ -27,7 +27,7 @@ This task will guide you through creating a workspace in Microsoft Fabric.
    
    ![](./Images/fab-image3.png)
 
-1. Select **Trial (1)** and click **Apply (2)** to create and open the workspace.
+1. Select **Fabric Trial (1)** and click **Apply (2)** to create and open the workspace.
 
    ![](./Images/fab-image4.png)
 

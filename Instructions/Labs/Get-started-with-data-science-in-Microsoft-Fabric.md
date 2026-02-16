@@ -31,13 +31,13 @@ Now that you have a workspace, it's time to switch to the *Data science* experie
 
 1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Lakehouse (2)** and select **Lakehouse (3)**.
    
-   ![](./Images/E2T1S2.png)
+   ![](./Images/fab-image11.png)
 
 1. In the **New Lakehouse** window, enter **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** as the name, select the **Location** as your workspace **dp_fabric-<inject key="Deployment ID" enableCopy="false"/> (2)** and click **Create (3)**. Keep the Lakehouse schemas unchecked.
 
     ![](./Images/L2T1S3n-2611.png)
 
-    >**Note:** After a minute or so, a new lakehouse with no **Tables** or **Files** will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this task, you'll simply download and extract a folder of text files from your local computer (or lab VM if applicable) and then upload them to your lakehouse.
+    >**Note:** After a minute or so, a new lakehouse with no **Tables** or **Files** will be created. You need to ingest some data into the data lakehouse for analysis. There are multiple ways to do this, but in this task, you will simply download and extract a folder of text files from your local computer (or lab VM if applicable) and then upload them to your lakehouse.
 
 1. Inside the provided LabVM, locate the **churn.csv** file for this exercise by navigating to **C:\LabFiles\dp-data-main**.
 
@@ -73,19 +73,19 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 1. In the **dp_fabric-<inject key="Deployment ID" enableCopy="false"/>** page, click on **+ New item (1)** and in the search bar serch for **Notebook (2)** and select **Notebook (3)**. Then click on **Create (4)**.
 
-     ![](./Images/E2T2S2.png)
+     ![](./Images/fab-image12.png)
 
      ![](./Images/L2T2S2n-2611.png)
 
 1. On the pop-up **Enhance your notebook experience with AI tools** select **Skip tour**.
 
-    ![](./Images/E2T2S2-1.png)
+    ![](./Images/fab-image13.png)
 
 1. Select the first cell (which is currently a *code* cell), and then in the dynamic toolbar at its top-right, use the **M&#8595;** button to convert the cell to a *markdown* cell.
 
     ![](./Images/E2T2S3.png)
 
-    When the cell changes to a markdown cell, the text it contents is rendered.
+    When the cell changes to a markdown cell, the text it content is rendered.
 
 1. Use the **&#128393;** (Edit) button to switch the cell to editing mode.
 
@@ -105,19 +105,19 @@ To train a model, you can create a *notebook*. Notebooks provide an interactive 
 
 You will explore how to import data into a DataFrame in Microsoft Fabric for processing and analysis in this task.
 
-Now you're ready to run code to prepare data and train a model. To work with data, you'll use *dataframes*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
+Now you're ready to run code to prepare data and train a model. To work with data, you will use *dataframes*. Dataframes in Spark are similar to Pandas dataframes in Python, and provide a common structure for working with data in rows and columns.
 
-1. Click on **Data items (1)** in the Explorer panel, then select **Add data items (3)** and choose **Existing data sources (3)** from the dropdown menu.
+1. Click on **Data items (1)** in the Explorer panel, then select **Add data items (3)** and choose **From OneLake catalog (3)** from the dropdown menu.
 
-   ![](./Images/E2T3S1.png)
+   ![](./Images/fab-image14.png)
 
 1. Select the lakehouse you created in a previous section named as **Lakehouse<inject key="Deployment ID" enableCopy="false"/> (1)** and select **Connect (2)**.
 
-   ![](./Images/E2T3S2.png)
+   ![](./Images/fab-image15.png)
 
 1. Click on the **Files (1)** folder to display the CSV file next to the notebook editor. Then, open the **ellipsis (...)** menu for **churn.csv (2)** and select **Load data (3)** > **Pandas (4)**.
 
-    ![](./Images/E2T3S3.png)
+    ![](./Images/fab-image16.png)
 
 1. A new code cell containing the following code should be added to the notebook:
 
@@ -152,7 +152,7 @@ Now you're ready to run code to prepare data and train a model. To work with dat
 
 In this task, you will learn how to train a Machine Learning model in Microsoft Fabric using a dataset to make predictions and gain insights.
 
-Now that you've loaded the data, you can use it to train a machine learning model and predict customer churn. You'll train a model using the Scikit-Learn library and track the model with MLflow. 
+Now that you've loaded the data, you can use it to train a machine learning model and predict customer churn. You will train a model using the Scikit-Learn library and track the model with MLflow. 
 
 1. Hover the mouse below the output sections and use the **+ Code** icon below the cell output to add a new code cell to the notebook.
 

@@ -84,7 +84,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    https://app.fabric.microsoft.com
    ```
    
-1. On the **Enter your email, we’ll check if you need to create a new account.** tab, you will see the login screen. In that enter the following email/username **(1)** and click **Submit (2):**
+1. On the **Enter your email, we will check if you need to create a new account.** tab, you will see the login screen. In that enter the following email/username **(1)** and click **Submit (2):**
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
@@ -118,7 +118,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./Images/GS9.png)
 
-1. After signing in, you’ll be directed to the **Fabric** Home page. click on the **Account manager** icon at the top-right corner **(1)** of the portal. In the profile pane that appears, click on **Free trial** **(2)** to begin activating your Microsoft Fabric trial.
+1. After signing in, you will be directed to the **Fabric** Home page. click on the **Account manager** icon at the top-right corner **(1)** of the portal. In the profile pane that appears, click on **Free trial** **(2)** to begin activating your Microsoft Fabric trial.
 
    ![](./Images/GS10.png)
 
@@ -132,7 +132,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![Enter Your Password](./Images/pg1S10-2611.png)
 
-1. On the **Invite teammates to try Fabric** pop-up, click on **Close**.
+1. On the **Invite teammates to try Fabric to extend your trial** pop-up, click on **Close**.
 
    ![Enter Your Password](./Images/pg1S11-2611.png)
 

@@ -3,9 +3,10 @@
 ### Estimated Duration: 120 Minutes
 
 ## Overview
-Data pipelines define a sequence of activities that orchestrate an overall process, usually by extracting data from one or more sources and loading it into a destination; often transforming it along the way. Pipelines are commonly used to automate extract, transform, and load (ETL) processes that ingest transactional data from operational data stores into an analytical data store, such as a lakehouse or data warehouse. The graphical pipeline canvas in the Fabric user interface enables you to build complex pipelines with minimal or no coding required.
 
-## Lab Objectives
+In this lab, you will learn how to use Data Factory pipelines in Microsoft Fabric to implement data ingestion solutions. You will create a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then use a Spark notebook to transform the ingested data and load it into a table. Finally, you will modify the pipeline to include the notebook as part of the workflow.
+
+## Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -13,7 +14,7 @@ In this lab, you will complete the following tasks:
  - Task 2: Create a notebook
  - Task 3: Modify the pipeline
 
-## _Architecture Diagram_
+## Architecture Diagram
 
 ![](./Images/lab2img.png)
 
@@ -23,23 +24,21 @@ A data lakehouse is a common analytical data store for cloud-scale analytics sol
 
 Fabric also supports Apache Spark, enabling you to write and run code to process data at scale. By combining the pipeline and Spark capabilities in Fabric, you can implement complex data ingestion logic that copies data from external sources into the OneLake storage on which the lakehouse is based, and then uses Spark code to perform custom data transformations before loading it into tables for analysis.
 
-> **Note**: You'll need a Microsoft Fabric license to complete this exercise. Complete the previous task to proceed further.
-
 ## Task 1: Create a pipeline
 
-A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
+In this task, you will create a pipeline that ingests data from an external source into your lakehouse. You will use a Copy Data activity to copy the data, and then use a Spark notebook to transform the ingested data and load it into a table.
 
 1. Select your **Lakehouse (1)**, then open **Get data (2)** and choose **New pipeline (3)**.
 
-    ![](./Images/fab-ms-ex1-g36.png)
+    ![](./Images/L2T1S1-2302.png)
 
 1. Create a new data pipeline named **Ingest Sales Data (1)** and click **Create (2)**.
 
     ![](./Images/fab-ms-ex1-g37.png)
 
-1. If the **Copy Data** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
+1. If the **Copy Data into Lakehouse** wizard doesn't open automatically, select **Copy Data** in the pipeline editor page.
 
-1. In the **Copy Data** wizard, on the **Choose a data source (1)** page, in the **New sources (2)** section, search **Http (3)** and select **Http (4)**.
+1. In the **Copy Data into Lakehouse** wizard, on the **Choose a data source (1)** page, in the **New sources (2)** section, search **Http (3)** and select **Http (4)**.
 
     ![](./Images/htpsrch.png)
 
@@ -58,7 +57,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. Set the **Request method (1)** to **GET** and leave the remaining fields unchanged. Select **Next (2)** to continue.
 
-    ![](./Images/fab-ms-ex1-g39.png)
+    ![](./Images/L2T1S7-2302.png)
 
 1. After the data is sampled, verify the following settings:
     - **File format (1)**: DelimitedText
@@ -66,28 +65,22 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Row delimiter (3)**: Default (\r, \n, or \r\n)
     - **First row as header (4)**: Selected
     - **Compression type (5)**: No compression  
-    Then select **Next (6)**.
+    - Then select **Next (6)**.
 
-        ![](./Images/fab-ms-ex1-g40.png)
-
-1. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
-
-1. On the **Choose data destination** page, select your existing lakehouse.
-
-    ![](./Images/imag12.png)
-
-    >**Note:** If the Fabric lakehouse is already selected, continue to the next steps.
+        ![](./Images/L2T1S8-2302.png)
 
 1. Configure the data destination with the following settings:
     - **Root folder (1)**: Files
     - **Folder path (2)**: new_data
     - **File name (3)**: sales.csv
     - **Copy behavior**: None  
-    Then select **Next (4)**.
+    Then select **Next (4)** twice.
 
         ![](./Images/fab-ms-ex1-g44.png)
 
 1. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+
+    ![](./Images/L2T1S12-2302.png)
 
 1. A new pipeline containing a **Copy Data** activity is created:
 
@@ -99,17 +92,19 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. In the menu bar on the left, select your **Lakehouse**.
 
-    ![](./Images/fab-ms-ex1-g49.png)
+    ![](./Images/L2T1S13-2302.png)
 
-1. Expand **Files (1)** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+1. Refresh and expand **Files (1)** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
 
     ![](./Images/new_data1.png)
 
 ## Task 2: Create a notebook
 
-1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
+In this task, you will create a Spark notebook to transform the ingested data and load it into a table. You will then run the notebook to verify that the data is correctly transformed and loaded.
 
-   ![](./Images/fab-ms-ex1-g45.png)
+1. On the **Home** page for your lakehouse, click on the **3-dots (1)** and select the **Open notebook (2)** menu, then click on **New notebook (3)**.
+
+   ![](./Images/L2T2S1-2302.png)
 
     After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
@@ -156,43 +151,44 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![](./Images/fab-ms-ex1-g50.png)
 
-1. In the hub menu bar on the left, select your lakehouse.
+1. In the **Explorer** pane of your Lakehouse, from the eplipses menu **(1)** of Tables, click on **Refresh (2)**.  Then expand **Tables**, and select the **sales (3)** table to see a preview of the data it contains.
 
-1. In the **Explorer** pane, refresh the view. Then expand **Tables (1)**, and select the **sales (2)** table to see a preview of the data it contains.
-
-   ![](./Images/saletable.png)
+   ![](./Images/L2T2S7-2302.png)
 
 ## Task 3: Modify the pipeline
 
-Now that you've implemented a notebook to transform data and load it into a table, you can incorporate the notebook into a pipeline to create a reusable ETL process.
+In this task, you will modify the pipeline you created in Task 1 to include the notebook you created in Task 2. This will allow you to run the notebook as part of the pipeline workflow, enabling you to automate the data transformation and loading process.
 
-1. In the hub menu bar on the left, select the **Ingest Sales Data** pipeline you created previously.
+1. In the left navigation menu bar, select the **Ingest Sales Data** pipeline you created previously.
 
 1. Open the **Activities (1)** tab, select the **More activities (2)** menu, and choose **Delete data (3)**. Drag the new Delete data activity to the left of the Copy data activity and connect its **On completion** output to Copy data.
 
     ![](./Images/fab-ms-ex1-g51.png)
 
-    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/delete-data-activity2.png)
+    ![Screenshot of a pipeline with Delete data and Copy data activities.](./Images/L2T3S2.2-2302.png)
 
 1. Select the **Delete data** activity and, in the pane below the canvas, set **General (1)** → **Name (2)** to **Delete old files**.
 
     ![](./Images/fab-ms-ex1-g52.png)
 
-1. In the **Source (1)** section, configure the following:
-    - **Connection (2)**: Your lakehouse connection  
-    - **Lakehouse (3)**: Select your lakehouse  
+1. In the **Source** section, configure the following:
+    - **Connection**: Click on the dropdown menu **(1)** and select **Browse all (2)**. On the Choose a data source to get started, select your **Lakehouse (3)**.  
     - **File path type (4)**: Wildcard file path  
     - **Folder path (5)**: Files/new_data
     - **Wildcard file name (6)**: *.csv  
     - **Recursively (7)**: Selected
 
-        ![](./Images/fab-ms-ex1-g53.png)
+        ![](./Images/L2T3S4.1-2302.png)
+
+        ![](./Images/L2T3S4.2-2302.png)
+
+        ![](./Images/L2T3S4.3-2302.png)                
 
 1. In the **Logging settings**, ensure **Enable logging** is **unselected**.
 
     ![](./Images/fab-ms-ex1-g54.png)
 
-    **Note:** These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
+    >**Note:** These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
 
 1. In the pipeline designer, select **Notebook** to add a **Notebook** activity to the pipeline.
 
@@ -216,24 +212,31 @@ Now that you've implemented a notebook to transform data and load it into a tabl
             | -- | -- | -- |
             | table_name | String | new_sales |
 
-            ![](./Images/ls1.png)
+            ![](./Images/L2T3S8.2-2302.png)
 
     The **table_name** parameter will be passed to the notebook and override the default value assigned to the **table_name** variable in the parameters cell.
 
-1. On the **Home** tab, use the **&#128427;** (*Save*) icon to save the pipeline. Then use the **&#9655; Run** button to run the pipeline, and wait for all of the activities to complete.
+1. On the **Home (1)** tab, use the **&#128427;(2)** (*Save*) icon to save the pipeline. Then use the **&#9655; Run (3)** button to run the pipeline, and wait for all of the activities to complete.
 
-    ![](./Images/fab-ms-ex1-g59.png)
+    ![](./Images/L2T3S9-2302.png)
 
-1. In the hub menu bar on the left edge of the portal, select your lakehouse.
+1. Navigate to your **Lakehouse** from the left navigation menu. 
 
-1. In the **Explorer** pane, expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
+    ![](./Images/L2T1S13-2302.png)
+
+1. In the **Explorer** pane, refresh and expand **Tables** and select the **new_sales** table to see a preview of the data it contains. This table was created by the notebook when it was run by the pipeline.
 
    ![](./Images/newsalesdata1.png)
 
-In this exercise, you implemented a data ingestion solution that uses a pipeline to copy data to your lakehouse from an external source, and then uses a Spark notebook to transform the data and load it into a table.
-
 ## Summary
 
-In this lab, you created a pipeline to automate data processing, developed a notebook for writing and testing your pipeline logic, and then modified the pipeline to refine its functionality. These tasks helped you gain practical experience in building and optimizing data workflows within a pipeline.
+In this lab, you have gained hands-on experience with using Data Factory pipelines in Microsoft Fabric to implement data ingestion solutions. You created a pipeline that uses a Copy Data activity to copy data from an external source into your lakehouse, and then used a Spark notebook to transform the ingested data and load it into a table. Finally, you modified the pipeline to include the notebook as part of the workflow, enabling you to automate the data transformation and loading process.
 
 ### You have successfully completed the lab.
+
+By completing the **Work with Delta Lake and Data Factory pipelines in Microsoft Fabric** hands-on lab, you have gained practical experience in working with **Microsoft Fabric Lakehouses** and **Data Factory Pipelines** to manage and process data efficiently. You learned how to store and manage data using **Delta Lake tables**, enabling reliable, scalable, and versioned data processing through Apache Spark.
+
+Additionally, you designed and implemented automated **ETL workflows using Fabric pipelines** to ingest, transform, and load data into your lakehouse. You also explored how to use Spark notebooks for data transformation and how to integrate them into your pipelines for end-to-end automation.
+
+Overall, you have developed essential skills in leveraging Microsoft Fabric's capabilities for building robust data engineering solutions, enabling you to efficiently manage and analyze data in a modern data architecture.
+

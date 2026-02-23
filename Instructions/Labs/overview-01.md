@@ -4,7 +4,11 @@
 
 ## Overview
 
-Microsoft Fabric lakehouses use Delta Lake, an open-source storage layer that enhances Spark-based data processing with relational database features. Tables in the lakehouse are Delta tables, marked by the triangular Delta (▴) icon, enabling advanced analytics. Data pipelines in Fabric automate the process of extracting, transforming, and loading (ETL) data from various sources into destinations like lakehouses or data warehouses. These pipelines can be easily designed using the graphical canvas in the Fabric user interface, allowing for complex workflows with minimal coding.
+This lab provides hands-on experience in working with Microsoft Fabric Lakehouses and Data Factory Pipelines to store, manage, and process data within a unified analytics platform. You will learn how to organize and manage structured data using Delta Lake tables in a Lakehouse environment and perform data processing using Apache Spark through notebooks.
+
+Throughout the lab, you will build automated data ingestion workflows using Fabric Data Factory Pipelines to extract, transform, and load (ETL) data from various sources into the Lakehouse. Using the graphical pipeline canvas, you will create and manage data workflows with minimal coding effort.
+
+By integrating data storage, processing, and orchestration capabilities, this lab helps you understand how Microsoft Fabric supports scalable data management and enables you to build efficient end-to-end data engineering solutions for analytics and reporting.
 
 ## Objective
 
@@ -12,8 +16,6 @@ The objective is to efficiently manage and analyze data by leveraging Data Lake 
 
 - **Use Delta tables in Apache Spark:** Leverage Delta tables in Apache Spark to enable reliable, scalable, and performant data processing with ACID transactions and versioning for advanced analytics.
 - **Ingest data with a pipeline:** Automate data ingestion by building pipelines to efficiently extract, transform, and load (ETL) data from various sources into a data lake or warehouse in Microsoft Fabric.
-
-**Fabric trial provides access to most features, but excludes Copilot, private links, and trusted workspace access ([learn more](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity)).**
 
 ## Prerequisites
 
@@ -63,17 +65,17 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./Images/gt-002.png)
+![Explore Lab Resources](./Images/exp-res-2302.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](./Images/gt-003.png)
+![Use the Split Window Feature](./Images/split-2302.png)
  
 ## Managing Your Virtual Machine
  
-You can start, stop, restart, or open your virtual machine from the **Resources (1)** tab using the available action buttons (2).
+You can **Start, Stop, Restart (2)** your virtual machine from the **Resources (1)** tab.
 
 ![Manage Your Virtual Machine](./Images/gt-004.png)
 

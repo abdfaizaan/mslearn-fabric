@@ -13,8 +13,6 @@ The objective is to efficiently manage and analyze data by leveraging Data Lake 
 - **Use Delta tables in Apache Spark:** Leverage Delta tables in Apache Spark to enable reliable, scalable, and performant data processing with ACID transactions and versioning for advanced analytics.
 - **Ingest data with a pipeline:** Automate data ingestion by building pipelines to efficiently extract, transform, and load (ETL) data from various sources into a data lake or warehouse in Microsoft Fabric.
 
-**Fabric trial provides access to most features, but excludes Copilot, private links, and trusted workspace access ([learn more](https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-trial#overview-of-the-trial-capacity)).**
-
 ## Prerequisites
 
 Participants should have:
@@ -63,17 +61,17 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./Images/gt-002.png)
+![Explore Lab Resources](./Images/exp-res-2302.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](./Images/gt-003.png)
+![Use the Split Window Feature](./Images/split-2302.png)
  
 ## Managing Your Virtual Machine
  
-You can start, stop, restart, or open your virtual machine from the **Resources (1)** tab using the available action buttons (2).
+You can **Start, Stop, Restart (2)** your virtual machine from the **Resources (1)** tab.
 
 ![Manage Your Virtual Machine](./Images/gt-004.png)
 

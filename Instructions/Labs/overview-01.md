@@ -4,7 +4,11 @@
 
 ## Overview
 
-Microsoft Fabric lakehouses use Delta Lake, an open-source storage layer that enhances Spark-based data processing with relational database features. Tables in the lakehouse are Delta tables, marked by the triangular Delta (▴) icon, enabling advanced analytics. Data pipelines in Fabric automate the process of extracting, transforming, and loading (ETL) data from various sources into destinations like lakehouses or data warehouses. These pipelines can be easily designed using the graphical canvas in the Fabric user interface, allowing for complex workflows with minimal coding.
+This lab provides hands-on experience in working with Microsoft Fabric Lakehouses and Data Factory Pipelines to store, manage, and process data within a unified analytics platform. You will learn how to organize and manage structured data using Delta Lake tables in a Lakehouse environment and perform data processing using Apache Spark through notebooks.
+
+Throughout the lab, you will build automated data ingestion workflows using Fabric Data Factory Pipelines to extract, transform, and load (ETL) data from various sources into the Lakehouse. Using the graphical pipeline canvas, you will create and manage data workflows with minimal coding effort.
+
+By integrating data storage, processing, and orchestration capabilities, this lab helps you understand how Microsoft Fabric supports scalable data management and enables you to build efficient end-to-end data engineering solutions for analytics and reporting.
 
 ## Objective
 

@@ -82,21 +82,21 @@ In this task, you will load data into a dataframe to prepare for model training.
     ![](./Images/01/E1T5S5.png)  
 
 
-1. Select the lakehouse named **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and click **Add (2)**.
+2. Select the lakehouse named **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and click **Add (2)**.
  
     ![](./Images/img-15.png) 
 
-1. Once after connecting to the existing lakehouse, we should be able to see the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** under **Data Items**.
+3. Once after connecting to the existing lakehouse, we should be able to see the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** under **Data Items**.
    
    ![](./Images/E4T3S3-1208.png)
 
-1. Click the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
+4. Click the **Files (1)** folder so that the CSV file is listed next to the notebook editor.
 
-1. Click on **Ellipsis ... (2)** for **churn.csv** file, and click on **Load data (3)** and then select **Pandas (4)**.
+5. Click on **Ellipsis ... (2)** for **churn.csv** file, and click on **Load data (3)** and then select **Pandas (4)**.
 
     ![](./Images/p5t3p5.png)
 
-1.  A new code cell containing the following code should be added to the notebook:
+6.  A new code cell containing the following code should be added to the notebook:
 
     ```Python
     import pandas as pd
@@ -109,7 +109,7 @@ In this task, you will load data into a dataframe to prepare for model training.
 
     ![](./Images/E4T3S6-1208.png)
 
-1. Use the **&#9655; Run cell** button on the left of the cell to run it.
+7. Use the **&#9655; Run cell** button on the left of the cell to run it.
 
     > **Note:** Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can take a minute or so to complete. Subsequent runs will be quicker.
 
@@ -117,11 +117,11 @@ In this task, you will load data into a dataframe to prepare for model training.
 
     ![](./Images/E4T3S7N-i.png)
     ![](./Images/E4T3S7N-ii.png)
-1. When the cell command has been completed, review the output below the cell, which should look similar to this:
+8. When the cell command has been completed, review the output below the cell, which should look similar to this:
 
     ![](./Images/output.png)
 
-1. The output shows the rows and columns of customer data from the churn.csv file.
+9. The output shows the rows and columns of customer data from the churn.csv file.
 
 ## Task 4: Train a machine learning model
 

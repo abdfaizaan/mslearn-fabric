@@ -128,6 +128,36 @@ To adjust the zoom level for the environment page, click the A↕ : 100% icon lo
 1. On the **Microsoft Fabric (Free) license assigned** dialog box, click **OK** to confirm the license assignment.  
 
    ![](./Images/freetrial.png)
+   
+1. In the Power BI Service homepage, select the **Settings (⚙️)** icon in the top-right corner. 
+
+2. From the dropdown menu, click **Admin portal**. 
+
+ 3. In the **Admin portal**, navigate to Tenant settings. 
+
+ 4. Locate **Service principals can call Fabric public APIs** and set the toggle to **Enabled**.
+
+     ![](./Images/powerbi-spn.png)
+
+ 5. From the dropdown menu, click **Admin portal**. 
+
+6. In the left navigation pane, select **Workspaces**, **ensure a workspace is created**. 
+
+7. In the **workspace**, select **Manage access** from the top menu.
+
+     ![](./Images/powerbi-ma.png)
+
+8. In the Manage access pane, **select + Add people or groups**
+
+    ![](./Images/powerbi-add-ppl.png)
+
+9.  In the **Add people pane**, search for the application using its name, select it from the results
+
+     ![](./Images/powerbi-admin.png)
+
+ 10. In the **Add people pane**, select the appropriate role from **Admin (1)**, and then **click Add (2)**.
+
+      ![](./Images/choose-admin-add.png)
 
 ## Support Contact
 

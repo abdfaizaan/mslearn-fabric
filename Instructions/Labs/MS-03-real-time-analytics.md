@@ -199,7 +199,7 @@ In this task, you will use Delta tables to handle streaming data, leveraging the
    from pyspark.sql.functions import *
 
    # Create a folder
-   inputPath = 'Files/data/'
+   inputPath = 'Files/delta/'
    mssparkutils.fs.mkdirs(inputPath)
 
    # Create a stream that reads data from the folder, using a JSON schema

@@ -65,6 +65,21 @@ In this task, you will create a Fabric workspace. The workspace will contain all
 
     ![](./Images/p1t2p3.png)
 
+1. In the left navigation pane, select **Workspaces**, **Ensure a workspace is created**. 
+
+1. In the **Workspace**, select **Manage access** from the top menu.
+
+     ![](./Images/powerbi-ma.png)
+
+1. In the Manage access pane, **select + Add people or groups**
+
+    ![](./Images/powerbi-add-ppl.png)
+
+1. In the **Add people** pane, paste the SPN  
+`https://aec-svc/` **(1)**, then select the **Admin (2)**, and click **Add (3)**.
+
+     ![](./Images/spn-01.png)
+
 ## Task 3: Create a Lakehouse
 
 In this task, switch to the Data engineering experience and create a new Lakehouse. You'll use it to ingest and manage data in the following steps.

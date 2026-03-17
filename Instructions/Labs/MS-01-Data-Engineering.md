@@ -65,11 +65,9 @@ In this task, you will create a Fabric workspace. The workspace will contain all
 
     ![](./Images/p1t2p3.png)
 
-1. In the left navigation pane, select **Workspaces**, **Ensure a workspace is created**. 
-
 1. In the **Workspace**, select **Manage access** from the top menu.
 
-     ![](./Images/powerbi-ma.png)
+     ![](./Images/fabric-workspace.png)
 
 1. In the Manage access pane, **select + Add people or groups**
 
